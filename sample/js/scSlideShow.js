@@ -1,28 +1,25 @@
 jQuery.fn.CreateSCShow = function() {
     slideShow = this;
-	slideChildren = slideShow.children(".slide");
+  slideChildren = slideShow.children(".slide");
 
-	// Dynamically add our ids and buttons based on our slide count
-	$(slideChildren).each(function(index) {
-		$(this).attr("id", "slide-" + index);
-    indexName = index++;
-		$("#controls").append("<a href='#' class='slide-button' id='button-" + indexName + "'>" + index + "</a>");
-	});
+  // Dynamically add our ids and buttons based on our slide count
+  $(slideChildren).each(function(index) {
+    $(this).attr("id", "slide-" + index);
+    $("#controls").append("<a href='#' class='slide-button' id='button-" + index + "'>" + index++ + "</a>");
+  });
 
-	$(function() {
-		slideShow.children(".slide").Rotate({ cycleTime: 5000, fadeTime: 1500 });
-	});
-
-	jQuery('.slide-button').click(function(){
-		var buttonId = jQuery(this).attr('id'); // get the current button id
-		jQuery('.slide-button').removeClass('active'); // remove all active classes on the slide buttons
-		jQuery(this).addClass('active');
-		var showSlide = buttonId.replace("button","slide");
-		jQuery("#" + showSlide).siblings(".slide").fadeOut(function(){
-			jQuery("#" + showSlide).fadeIn();
-		});
-		return false;
-	});
+  slideShow.children(".slide").Rotate({ cycleTime: 5000, fadeTime: 1000 });
+  
+  jQuery('.slide-button').click(function(){
+    var buttonId = jQuery(this).attr('id'); // get the current button id
+    jQuery('.slide-button').removeClass('active'); // remove all active classes on the slide buttons
+    jQuery(this).addClass('active');
+    var showSlide = buttonId.replace("button","slide");
+    jQuery("#" + showSlide).siblings(".slide").fadeOut(function(){
+      jQuery("#" + showSlide).fadeIn();
+    });
+    return false;
+  });
 }
 
 jQuery.fn.Rotate = function(config) {
