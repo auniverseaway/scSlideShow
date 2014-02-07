@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCHAWEL + COLES Responsive SlideShow</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+  	<div class="col-lg-12 hero">
+                <div id="hero-slides">
+	<div id="controls"></div>
+	<a href="" class="slide">
+    <div class="slide-content" style="
+        background: url('img/scDesk.jpg');
+        background-size: 100% auto;
+        background-position: center center;
+    ">
+        <h2 class="slide-heading" style="color: #ffffff">Catch Knowledge</h2>
+        <p class="slide-text" style="color: #ffffff">Not STDS</p>
+        <p class="btn btn-primary" style="">
+            <span style="color: #ffffff">Learn more</span>
+        </p>
+    </div>
+</a><a href="" class="slide">
+    <div class="slide-content" style="
+        background: url('img/scCooler.jpg');
+        background-size: 100% auto;
+        background-position: center center;
+    ">
+        <h2 class="slide-heading" style="color: #ffffff">SCHAWEL+COLES</h2>
+        <p class="slide-text" style="color: #ffffff">Sub Title Text</p>
+        <p class="btn btn-primary" style="">
+            <span style="color: #ffffff">Button Text</span>
+        </p>
+    </div>
+</a>
+</div>
+<script type="text/javascript" src="http://schawel-coles.mybigcommerce.com/template/js/scSlideShow.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#hero-slides").CreateSCShow();
+  });
+</script>
+            </div>
+
+    
+  </body>
+</html>

@@ -1,0 +1,70 @@
+.hero {
+    padding-left: 0px !important; /* We're remove the padding to get a nice wide hero on mobile */
+    padding-right: 0px !important;
+    margin: 0px;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+#hero-slides {
+  height: 400px;
+  position: relative;
+}
+
+#hero-slides #controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+#hero-slides #controls a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#hero-slides #controls a.active {
+    background-color: #428bca;
+    color: #FFF;
+}
+
+.slide {
+  display: block;
+  height: 400px;
+}
+
+.slide:hover {
+  text-decoration: none;
+}
+
+.slide-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: auto 100% !important; /*We're basically in portrait, so let's make the image constrain at the height*/
+  padding: 20px;
+}
+
+.slide-content h2 {
+  margin: 0px;
+  text-shadow: 0 0 10px #000000;
+}
+
+@media (min-width: 768px) {
+  .slide-content {
+    background-size: 100% auto !important;
+  }
+}
